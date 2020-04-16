@@ -2,11 +2,9 @@ const express = require('express')
 const config = require('config')
 
 
-const knex = require('./knex/knex.js');
-
 const app = express()
 
-//app.use('/api/auth')
+app.use('/api/auth', require('./routes/auth'))
 
 const PORT = config.get('port') || 5000
 
