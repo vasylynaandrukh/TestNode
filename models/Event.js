@@ -1,9 +1,12 @@
 "use strict";
 
-const Model = use("Model");
+const { Model } = require('objection')
+const knex = require('../database/knex')
+
+Model.knex(knex)
 
 class Event extends Model {
-    static get table() {
+    static get tableName() {
         return "events";
     }
 }
