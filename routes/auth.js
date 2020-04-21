@@ -1,19 +1,11 @@
 const {Router} = require('express')
 const router = Router()
-const check = require('express-validator')
+//const {check} = require('express-validator')
+const LoginController = require('../controllers/auth/login')
+const RegistrationController = require('../controllers/auth/registration')
 
-router.post('register',
-    [
-        check('email', 'Invalid email').isEmail(),
-        check('password', 'Min length 6').isLength({ min: 6})
-    ], 
-    'RegistationController.index')
+router.post('/register', RegistrationController.index)
 
-router.post('login',
-    [
-        check('email', 'Invalid email').normalizeEmail().isEmail(),
-        check('password', 'Invalid password').exists()
-    ], 
-    'LoginController.index')
+router.post('/login', LoginController.index)
 
 module.exports = router
