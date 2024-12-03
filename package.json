@@ -21,7 +21,7 @@
     "express": "^4.17.1",
     "express-openid-connect": "^1.0.1",
     "express-validator": "^6.4.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.20.14",
     "method-override": "^3.0.0",
     "objection": "^2.1.3",
